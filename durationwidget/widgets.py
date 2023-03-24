@@ -25,6 +25,9 @@ def get_time_factors(td):
 
 
 def get_human_readable_duration(value):
+    if value is None:
+        return ""
+
     format_list = []
     parsed_value = parse_duration(value)
     days, hours, minutes, seconds = get_time_factors(parsed_value)
