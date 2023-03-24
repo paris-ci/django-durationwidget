@@ -5,7 +5,7 @@ from django.forms import MultiWidget
 from django.forms.widgets import Input
 from django.utils.dateparse import parse_duration
 from django.utils.translation import (
-    ugettext_lazy,
+    gettext_lazy,
     ngettext_lazy,
 )
 
@@ -81,10 +81,10 @@ class TimeDurationWidget(MultiWidget):
         self.show_minutes = show_minutes
         self.show_seconds = show_seconds
         _widgets = []
-        _widgets.append(LabeledNumberInput(label=ugettext_lazy("Days"), type="days")) if show_days else None,  # Day
-        _widgets.append(LabeledNumberInput(label=ugettext_lazy("Hours"), type="hours")) if show_hours else None,  # Hour
-        _widgets.append(LabeledNumberInput(label=ugettext_lazy("Minutes"), type="minutes")) if show_minutes else None,  # Minute
-        _widgets.append(LabeledNumberInput(label=ugettext_lazy("Seconds"), type="seconds")) if show_seconds else None,  # Seconds
+        _widgets.append(LabeledNumberInput(label=gettext_lazy("Days"), type="days")) if show_days else None,  # Day
+        _widgets.append(LabeledNumberInput(label=gettext_lazy("Hours"), type="hours")) if show_hours else None,  # Hour
+        _widgets.append(LabeledNumberInput(label=gettext_lazy("Minutes"), type="minutes")) if show_minutes else None,  # Minute
+        _widgets.append(LabeledNumberInput(label=gettext_lazy("Seconds"), type="seconds")) if show_seconds else None,  # Seconds
         super().__init__(_widgets, attrs)
 
     # ---------------------------------------------------------------------------------------------------------------------
