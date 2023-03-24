@@ -1,5 +1,5 @@
 <label>
   <input type="{{ widget.type }}" name="{{ widget.name }}"{% if widget.value != None %}
        value="{{ widget.value|stringformat:'s' }}"{% endif %}{% include "django/forms/widgets/attrs.html" %} />
-  <span class="help" style="display: inline;">&nbsp;{{ widget.widget_label }}</span>
+  <span data-widgettype="{{ widget.type }}" class="help" style="display: inline;">&nbsp;{{ widget.widget_label }}</span>
 </label>&nbsp;&nbsp;
