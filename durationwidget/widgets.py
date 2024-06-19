@@ -113,6 +113,8 @@ class TimeDurationWidget(MultiWidget):
                 data_list[key] = int(val)
             except ValueError:
                 data_list[key] = 0
+            except TypeError:
+                data_list[key] = 0
 
         days = 0 if not self.show_days else data_list.get("days")
         hours = 0 if not self.show_hours else data_list.get("hours")
