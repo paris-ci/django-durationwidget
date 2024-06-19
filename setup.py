@@ -5,8 +5,8 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="django-durationwidget",
-    version="1.0.12",
-    author="Devang Padhiyar",
+    version="1.0.13",
+    author="Devang Padhiyar + paris-ci",
     author_email="devangpadhiyar700@gmail.com",
     description="Django Duration field widget to handle duration field in the form",
     long_description=long_description,
